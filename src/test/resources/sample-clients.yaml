@@ -1,0 +1,22 @@
+clients:
+
+  - client_description: "Test Client 1"
+    client_id: "test-client-1"
+    client_secret: "secret1"
+    scopes:
+      - "read"
+      - "write"
+    grant_types:
+      - "authorization_code"
+      - "refresh_token"
+    redirect_uris:
+      - "https://example.com/callback"
+
+  - client_description: "Test Client 2"
+    client_id: "test-client-2"
+    client_secret: "secret2"
+    scopes:
+      - "read"
+    grant_types:
+      - "client_credentials"
+
