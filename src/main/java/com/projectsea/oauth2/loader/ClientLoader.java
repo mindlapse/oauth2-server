@@ -99,6 +99,8 @@ public class ClientLoader {
             clientList.add(new Client(clientDescription, clientId, clientSecret, scopes, grantTypes, redirectUris));
         }
 
+        logger.info("Loaded {} clients from YAML", clientList.size());
+
         return clientList;
     }
 

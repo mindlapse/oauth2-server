@@ -108,7 +108,9 @@ public class OAuth2AuthorizationServerConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         
-        http.with(OAuth2AuthorizationServerConfigurer.authorizationServer(), Customizer.withDefaults());
+        http.with(
+            OAuth2AuthorizationServerConfigurer.authorizationServer().oidc(Customizer.withDefaults()),
+            Customizer.withDefaults());
         http.formLogin(Customizer.withDefaults());
     
         return http.build();
