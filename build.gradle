@@ -15,6 +15,14 @@ springBoot {
     mainClass = 'com.projectsea.oauth2.OAuth2Application'
 }
 
+bootJar {
+    archiveFileName = "oauth2-server-${version}.jar"
+}
+
+jar {
+    enabled = false
+}
+
 repositories {
     mavenCentral()
 }
